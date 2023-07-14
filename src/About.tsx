@@ -1,9 +1,9 @@
-import './App.css';
+import { Box } from '@mui/system';
+import React from 'react';
 
-
-function App() {
+function About() {
   return (
-    <>
+    <Box sx={{backgroundColor: "white"}}>
       <h1>Henry Nguyen</h1>
       <h2>About me</h2>
       <p>
@@ -45,8 +45,8 @@ function App() {
         opportunity, please feel free to get in touch, I'd 
         appreciate that.
       </p>
-    </>
+    </Box>
   );
 }
 
-export default App;
+export default About;
