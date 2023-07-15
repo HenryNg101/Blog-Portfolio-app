@@ -8,12 +8,8 @@ import Typography from '@mui/material/Typography';
 
 export default function MediaCard() {
   return (
-    <Card sx={{ width: 300, position: {md: "fixed"}, m: 3, textAlign: 'center'}}>
-      <CardMedia
-        sx={{ height: 320 }}
-        src="/assets/image/avatar.jpg"
-        title="My avatar"
-      />
+    <Card sx={{ width: 300, position: {md: "fixed"}, m: 3, textAlign: 'center', borderRadius: '20px'}}>
+      <img src='/assets/image/avatar.jpg' alt='My avatar' width={100} style={{borderRadius: '50%'}}/>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Henry Nguyen
@@ -23,9 +19,9 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Github</Button>
-        <Button size="small">LinkedIn</Button>
-        <Button size="small">Gmail</Button>
+        <Button size="small" href='https://github.com/HenryNg101'>Github</Button>
+        <Button size="small" href='https://www.linkedin.com/in/henry-nguyen0/'>LinkedIn</Button>
+        <Button size="small" href='mailto:hungnguyenquoc8a2@gmail.com'>Gmail</Button>
       </CardActions>
     </Card>
   );
