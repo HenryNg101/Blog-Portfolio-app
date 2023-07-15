@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 
 const pages = ['Home', 'About', 'Projects'];
 
@@ -25,7 +26,7 @@ function NavBar() {
 
   //Render differently when screen size is large or small.
   return (
-    <AppBar position="static" sx={{backgroundColor: 'gray'}}>
+    <AppBar position="static" sx={{backgroundColor: 'gray', mb: 2}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Button
@@ -42,7 +43,7 @@ function NavBar() {
               },
             }}
           >
-            Henry Nguyen
+            <Link to={`/`}>Henry Nguyen</Link>
           </Button>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
@@ -59,7 +60,7 @@ function NavBar() {
                   },
                 }}
               >
-                {page}
+                <Link to={`/${page.toLowerCase()}`}>{page}</Link>
               </Button>
             ))}
           </Box>
@@ -97,7 +98,7 @@ function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  {page}
+                  <Link to={`/${page.toLowerCase()}`}>{page}</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -119,7 +120,7 @@ function NavBar() {
               },
             }}
           >
-            Henry Nguyen
+            <Link to={`/`}>Henry Nguyen</Link>
           </Button>
           <div style={{flexGrow: 1}}></div>
         </Toolbar>

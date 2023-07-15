@@ -8,10 +8,10 @@ import Typography from '@mui/material/Typography';
 
 export default function MediaCard() {
   return (
-    <Card sx={{ maxWidth: 345, position: "fixed"}}>
+    <Card sx={{ width: 300, position: {md: "fixed"}, m: 3, textAlign: 'center'}}>
       <CardMedia
         sx={{ height: 320 }}
-        src="../public/assets/img/avatar.jpg"
+        src="/assets/image/avatar.jpg"
         title="My avatar"
       />
       <CardContent>
@@ -19,7 +19,7 @@ export default function MediaCard() {
           Henry Nguyen
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          A guy who loves coding
+          A guy who wants to explore this world of technologies
         </Typography>
       </CardContent>
       <CardActions>

@@ -1,17 +1,22 @@
 import { Box } from '@mui/system';
 import React from 'react';
+import { 
+  Paper,
+  Typography
+} from '@mui/material';
 
 function About() {
   return (
-    <Box sx={{backgroundColor: "white"}}>
-      <h1>Henry Nguyen</h1>
-      <h2>About me</h2>
-      <p>
+    <Paper elevation={10} sx={{borderRadius: '20px', padding: 3}}>
+      <Typography variant='h6' component="h2" sx={{mb: 2, fontWeight: 'bold', textAlign: 'center'}}>
+        About me
+      </Typography>
+      <Typography variant="body1" sx={{mb: 2}}>
         Hi, my name is Quoc Hung Nguyen (That's my Vietnamese name,
         for convinience, my English name is Henry Nguyen, you can 
         just call me Henry).
-      </p>
-      <p>
+      </Typography>
+      <Typography variant="body1" sx={{mb: 2}}>
         Currently, I'm studying my final year of the
         Bachelor degree of IT (Software Engineering) at University 
         of South Australia. As an aspiring IT student, I have been 
@@ -22,8 +27,8 @@ function About() {
         information systems, how they works, which is why I have 
         more interests in system architecture and backend, compared 
         to other techs.
-      </p>
-      <p>
+      </Typography>
+      <Typography sx={{mb: 2}}>
         I'm interested in solving problem too, whether building a product 
         to solve some daily problems, or highly technical problems, 
         which is why, when I don't have to study for Uni or doing 
@@ -31,21 +36,21 @@ function About() {
         (hackathons, competitive programming, algo trading, etc.). I also did a summer 
         internship as a Fullstack Software Engineer (SWE) at Maptek, a mining company, so if you have any 
         questions about the company, feel free to reach me out.
-      </p>
-      <p>
+      </Typography>
+      <Typography sx={{mb: 2}}>
         This is the place where you can find more information about 
         me, all of my personal projects, and potentially some blog 
         posts in the future (if I have time 😅)
-      </p>
-      <p>
+      </Typography>
+      <Typography sx={{mb: 2}}>
         I'm currently seeking for opportunities (internship, 
         part-time, or graduate) to gain industry experience in 
         software engineering, especially in web/mobile 
         development or DevOps/SRE. So, if you know any available 
         opportunity, please feel free to get in touch, I'd 
         appreciate that.
-      </p>
-    </Box>
+      </Typography>
+    </Paper>
   );
 }
 
