@@ -20,16 +20,18 @@ interface CardProps {
 
 export default function ProjectInfoCard({img, project_info, technologies_used}: CardProps) {
   return (
-    <a href={project_info.url} target='_blank' rel="noopener noreferrer">
-      <Paper 
-        elevation={10} 
-        sx={{ 
-          borderRadius: '20px', 
-          p: 3, 
-          m: 2,
-          '&:hover': {transform: 'scale(1.05)'}
-        }}
-      >
+    <Paper 
+      elevation={10} 
+      sx={{ 
+        borderRadius: '20px', 
+        p: 3, 
+        my: 2,
+        mx: 'auto',
+        '&:hover': {transform: 'scale(1.05)'},
+        width: 'calc(100% * 7 / 8)'
+      }}
+    >
+      <a href={project_info.url} target='_blank' rel="noopener noreferrer">
         <Grid container spacing={2}>
           <Grid item xs={3}>
             <img src={img.loc} alt={img.alt} width={150}/>
@@ -52,7 +54,7 @@ export default function ProjectInfoCard({img, project_info, technologies_used}: 
           </Grid>
 
         </Grid>
-      </Paper>
-    </a>
+      </a>
+    </Paper>
   );
 }

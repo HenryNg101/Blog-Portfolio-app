@@ -7,7 +7,7 @@ import {
 
 function About() {
   return (
-    <Paper elevation={10} sx={{borderRadius: '20px', padding: 3}}>
+    <Paper elevation={10} sx={{borderRadius: '20px', padding: 3,  width: 'calc(87.5%)', mx: 'auto'}}>
       <Typography variant='h6' component="h2" sx={{mb: 2, fontWeight: 'bold', textAlign: 'center'}}>
         About me
       </Typography>

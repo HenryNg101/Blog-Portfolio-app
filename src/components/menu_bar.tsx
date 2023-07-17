@@ -50,7 +50,6 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
                 sx={{
                   color: 'black', 
                   fontFamily: 'monospace',
