@@ -30,33 +30,27 @@ function NavBar() {
       <Container maxWidth={false}>
         <Toolbar disableGutters>
           <Button
-            sx={{
-              display: { xs: 'none', md: 'flex'},
-              justifyContent: 'flex-start',
+            sx={{ 
+              display: { xs: 'none', md: 'flex'}, 
+              color: 'black',
               fontFamily: 'Courier New, monospace',
               fontWeight: 'bold',
               fontSize: 20,
-              color: 'black',
-              '&:hover': {
-                backgroundColor: 'black',
-                color: 'white',
-              },
+              '&:hover': { backgroundColor: 'black', color: 'white'}
             }}
           >
             <Link to={`/`}>Henry Nguyen</Link>
           </Button>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+          <Box sx={{display: { xs: 'none', md: 'flex' }}}>
             {pages.map((page) => (
               <Button
                 key={page}
                 sx={{
+                  mx: 0.5,
                   color: 'black', 
                   fontFamily: 'monospace',
-                  '&:hover': {
-                    backgroundColor: 'black',
-                    color: 'white',
-                  },
+                  '&:hover': { backgroundColor: 'black', color: 'white' }
                 }}
               >
                 <Link to={`/${page.toLowerCase()}`}>{page}</Link>

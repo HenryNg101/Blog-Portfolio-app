@@ -13,7 +13,7 @@ function About() {
       </Typography>
       <Typography variant="body1" sx={{mb: 2}}>
         Hi, my name is Quoc Hung Nguyen (That's my Vietnamese name,
-        for convinience, my English name is Henry Nguyen, you can 
+        for convenience, my English name is Henry Nguyen, you can 
         just call me Henry).
       </Typography>
       <Typography variant="body1" sx={{mb: 2}}>
