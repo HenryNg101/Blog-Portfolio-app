@@ -6,12 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
+  Navigate
 } from "react-router-dom";
 import ErrorPage from './pages/error';
 import About from './pages/about';
 import Projects from './pages/projects';
 
 const rootElement = document.getElementById('root');
+
+//TODO: Replace the default page to /home later on, right now, this is just temporary replacement.
 const routerConfig = createBrowserRouter([
   {
     path: "/",
@@ -19,12 +22,16 @@ const routerConfig = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       {
+        path: '',
+        element: <Navigate to="/about" replace={true} />,
+      },
+      {
         path: 'about',
         element: <About/>
       },
       {
         path: 'home',
-        element: <></>
+        element: <Navigate to="/about" replace={true} />,
       },
       {
         path: 'projects',

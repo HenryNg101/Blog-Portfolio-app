@@ -19,7 +19,7 @@
     "project_info": {
       "url": "https://github.com/HenryNg101/Pathfinder-Algorithms",
       "title": "Pathfinding algorithms visualiser",
-      "desc": "A program that demonstrate several pathfinding algorithms (A*, BFS, DFS, etc.)"
+      "desc": "A Python program that demonstrate several pathfinding algorithms (A*, BFS, DFS, etc.), with the problem as a maze with walls as obstacles, and the goal was to travel from start to destination point"
     },
     "technologies_used": ["Python", "Pygame", "Pathfinding"]
   },
@@ -43,7 +43,7 @@
     "project_info": {
       "url": "https://devpost.com/software/medbuddy-emcsux",
       "title": "Medbuddy mobile app",
-      "desc": "A software solution that was built during UniHack 2022 hackathon, as a companion to solve medical-related problems. I was responsible for the Android app"
+      "desc": "A software solution that was built during UniHack 2022 hackathon, as a companion to solve medical-related problems. There was a web and mobile version of the solution, and I was responsible for the Android app"
     },
     "technologies_used": ["Flutter", "Dart"]
   }

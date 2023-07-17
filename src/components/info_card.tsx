@@ -1,18 +1,24 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import {
+  Typography,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia
+} from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const accounts = [
-  {"type": "Github", "url": "https://github.com/HenryNg101"},
-  {"type": "Gmail", "url":"mailto:hungnguyenquoc8a2@gmail.com"},
-  {"type": "LinkedIn", "url":"https://www.linkedin.com/in/henry-nguyen0/"}
+  {"type": "Github", "url": "https://github.com/HenryNg101", "icon": faSquareGithub},
+  {"type": "Gmail", "url":"mailto:hungnguyenquoc8a2@gmail.com", "icon": faEnvelope},
+  {"type": "LinkedIn", "url":"https://www.linkedin.com/in/henry-nguyen0/", "icon": faLinkedin}
 ]
 
 export default function MediaCard() {
+  //let [isHovering, setButtonHoveringStatus] = React.useState(false);
+
   return (
     <Card 
       sx={{ 
@@ -22,10 +28,15 @@ export default function MediaCard() {
         p: 2,
         textAlign: 'center', 
         borderRadius: '20px',
-        position: {md: 'fixed'}
+        position: {md: 'fixed'},
       }}
     >
-      <img src='/assets/image/avatar.jpg' alt='My avatar' width={100} style={{borderRadius: '50%', marginLeft: "auto", marginRight: "auto"}}/>
+      <CardMedia
+        sx={{width: 100, height: 100, borderRadius: '50%', marginLeft: "auto", marginRight: "auto"}}
+        image="/assets/image/avatar.jpg"
+        title="Avatar"
+      />
+            
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Henry Nguyen
@@ -35,17 +46,22 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <Typography variant="body2" color="text.secondary">
-          My contacts:
-        </Typography>
+        My contacts:
+      </Typography>
+
       <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
         {
           accounts.map((account) => (
-            <Button
-              key={account.type + account.url}
-              sx={{ color: 'black', border:'solid thin', '&:hover': { backgroundColor: 'black', color: 'white'}}}
-            >
-              <a href={account.url}>{account.type}</a>
-            </Button>
+            <a href={account.url} key={account.type + account.url}>
+              <FontAwesomeIcon 
+                icon={account.icon}
+                size='2x'
+                color='gray'
+                title={account.type}
+                onMouseEnter={(e) => {e.currentTarget.style.color = 'black'}} 
+                onMouseLeave={(e) => {e.currentTarget.style.color = 'gray'}}
+              />
+            </a>
           ))
         }
       </CardActions>
