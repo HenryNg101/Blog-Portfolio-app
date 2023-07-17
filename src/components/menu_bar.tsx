@@ -27,12 +27,12 @@ function NavBar() {
   //Render differently when screen size is large or small.
   return (
     <AppBar position="static" sx={{backgroundColor: 'gray', mb: 2}}>
-      <Container maxWidth="xl">
+      <Container maxWidth={false}>
         <Toolbar disableGutters>
           <Button
             sx={{
-              mr: 2, 
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', md: 'flex'},
+              justifyContent: 'flex-start',
               fontFamily: 'Courier New, monospace',
               fontWeight: 'bold',
               fontSize: 20,
