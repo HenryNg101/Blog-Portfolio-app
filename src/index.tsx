@@ -11,6 +11,7 @@ import {
 import ErrorPage from './pages/error';
 import About from './pages/about';
 import Projects from './pages/projects';
+import Home from './pages/home';
 
 const rootElement = document.getElementById('root');
 
@@ -23,7 +24,7 @@ const routerConfig = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <Navigate to="/about" replace={true} />,
+        element: <Home />,
       },
       {
         path: 'about',
@@ -31,7 +32,7 @@ const routerConfig = createBrowserRouter([
       },
       {
         path: 'home',
-        element: <Navigate to="/about" replace={true} />,
+        element: <Navigate to="/" replace={true} />,
       },
       {
         path: 'projects',
