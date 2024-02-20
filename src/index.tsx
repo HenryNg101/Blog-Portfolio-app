@@ -24,7 +24,7 @@ const routerConfig = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <Home />,
+        element: <Navigate to="/about" replace={true} />,
       },
       {
         path: 'about',
@@ -32,7 +32,7 @@ const routerConfig = createBrowserRouter([
       },
       {
         path: 'home',
-        element: <Navigate to="/" replace={true} />,
+        element: <Navigate to="/about" replace={true} />,
       },
       {
         path: 'projects',

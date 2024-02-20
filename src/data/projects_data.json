@@ -1,50 +1,42 @@
 [
   {
+    "url": "https://github.com/HenryNg101/Freight-Frenzy-scoring-android-app",
+    "title": "Freight Frenzy scoring app",
+    "desc": "An Android app that helps calculating score for the FIRST Tech Challenge robotic competition. Students can also register team, or sharing score, etc.",
     "img": {
       "loc":"/assets/image/robot.png",
       "alt":"Robot"
     },
-    "project_info": {
-      "url": "https://github.com/HenryNg101/Freight-Frenzy-scoring-android-app",
-      "title": "Freight Frenzy scoring app",
-      "desc": "An Android app that helps calculating score for the FIRST Tech Challenge robotic competition. Students can also register team, or sharing score, etc."
-    },
     "technologies_used": ["Kotlin", "Gradle", "API", "XML", "Google Map API", "Design Patterns"]
   },
   {
+    "url": "https://github.com/HenryNg101/Pathfinder-Algorithms",
     "img": {
       "loc":"/assets/image/pathfinder.png",
       "alt":"Pathfinder program"
     },
-    "project_info": {
-      "url": "https://github.com/HenryNg101/Pathfinder-Algorithms",
-      "title": "Pathfinding algorithms visualiser",
-      "desc": "A Python program that demonstrate several pathfinding algorithms (A*, BFS, DFS, etc.), with the problem as a maze with walls as obstacles, and the goal was to travel from start to destination point"
-    },
+    "title": "Pathfinding algorithms visualiser",
+    "desc": "A Python program that demonstrate several pathfinding algorithms (A*, BFS, DFS, etc.), with the problem as a maze with walls as obstacles, and the goal was to travel from start to destination point",
     "technologies_used": ["Python", "Pygame", "Pathfinding"]
   },
   {
+    "url": "https://github.com/HenryNg101/Nand2Tetris-solution",
     "img": {
       "loc":"/assets/image/nand2tetris.png",
       "alt":"Nand2Tetris project"
     },
-    "project_info": {
-      "url": "https://github.com/HenryNg101/Nand2Tetris-solution",
-      "title": "Nand2Tetris computer system",
-      "desc": "A simple computer system with necessary hardware (developed in HDL) and software (developed in Python), built during the Nand2Tetris course"
-    },
+    "title": "Nand2Tetris computer system",
+    "desc": "A simple computer system with necessary hardware (developed in HDL) and software (developed in Python), built during the Nand2Tetris course",
     "technologies_used": ["Python", "HDL", "Assembly"]
   },
   {
+    "url": "https://devpost.com/software/medbuddy-emcsux",
     "img": {
       "loc":"/assets/image/medbuddy.png",
       "alt":"Medbuddy app"
     },
-    "project_info": {
-      "url": "https://devpost.com/software/medbuddy-emcsux",
-      "title": "Medbuddy mobile app",
-      "desc": "A software solution that was built during UniHack 2022 hackathon, as a companion to solve medical-related problems. There was a web and mobile version of the solution, and I was responsible for the Android app"
-    },
+    "title": "Medbuddy mobile app",
+    "desc": "A software solution that was built during UniHack 2022 hackathon, as a companion to solve medical-related problems. There was a web and mobile version of the solution, and I was responsible for the Android app",
     "technologies_used": ["Flutter", "Dart"]
   }
 ]

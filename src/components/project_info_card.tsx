@@ -6,19 +6,15 @@ interface ImageInfo {
   alt: string;  //Alternative title when image is not available
 }
 
-interface ProjectInfo {
+interface ProjectDetails {
   url: string;
   title: string;
   desc: string;
-}
-
-interface CardProps {
   img: ImageInfo;
-  project_info: ProjectInfo;
   technologies_used: Array<string>;
 }
 
-export default function ProjectInfoCard({img, project_info, technologies_used}: CardProps) {
+export default function ProjectInfoCard({url, title, desc, img, technologies_used}: ProjectDetails) {
   return (
     <Paper 
       elevation={10} 
@@ -31,14 +27,14 @@ export default function ProjectInfoCard({img, project_info, technologies_used}: 
         width: 'calc(100% * 7 / 8)'
       }}
     >
-      <a href={project_info.url} target='_blank' rel="noopener noreferrer">
+      <a href={url} rel="noopener noreferrer">
         <Grid container spacing={2}>
           <Grid item xs={3}>
             <img src={img.loc} alt={img.alt} width={150}/>
           </Grid>
 
           <Grid item xs={9}>
-            <Typography component="h6" variant='h5' sx={{fontWeight: 'bold'}}>{project_info.title}</Typography>            
+            <Typography component="h6" variant='h5' sx={{fontWeight: 'bold'}}>{title}</Typography>            
             <Grid container spacing={1}>
               {
                 technologies_used.map((tech) => (
@@ -50,7 +46,7 @@ export default function ProjectInfoCard({img, project_info, technologies_used}: 
                 ))
               }
             </Grid>
-            <Typography component="p">{project_info.desc}</Typography>
+            <Typography component="p">{desc}</Typography>
           </Grid>
 
         </Grid>
