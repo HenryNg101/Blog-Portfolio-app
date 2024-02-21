@@ -1,9 +1,5 @@
-import { Box } from '@mui/system';
 import React from 'react';
-import { 
-  Paper,
-  Typography
-} from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 
 function About() {
   return (
@@ -15,8 +11,7 @@ function About() {
         Hi, my name is Quoc Hung Nguyen (for convenience, my English name is Henry Nguyen, you can 
         just call me Henry). Currently, I'm studying my final year of the
         Bachelor degree of IT (Software Engineering) at University 
-        of South Australia (However, I might change to Honour program, which means that I'll study 
-        one more year and graduate by the end of 2024 instead of 2023). 
+        of South Australia. 
       </Typography>
       <Typography sx={{mb: 2}}>
         As an aspiring IT student, I'm interested in solving problem, whether building a product 

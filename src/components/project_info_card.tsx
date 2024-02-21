@@ -14,19 +14,19 @@ interface ProjectDetails {
   technologies_used: Array<string>;
 }
 
+//Some styling for components (sx prop)
+const cardStyle = { 
+  borderRadius: '20px', p: 3, my: 2, mx: 'auto', 
+  '&:hover': {transform: 'scale(1.05)'}, width: 'calc(100% * 7 / 8)'
+}
+const techNameButtonStyle = {
+  border:"thin dashed", color: 'black', my: 1, 
+  '&:hover': {backgroundColor: '#dedede'}
+}
+
 export default function ProjectInfoCard({url, title, desc, img, technologies_used}: ProjectDetails) {
   return (
-    <Paper 
-      elevation={10} 
-      sx={{ 
-        borderRadius: '20px', 
-        p: 3, 
-        my: 2,
-        mx: 'auto',
-        '&:hover': {transform: 'scale(1.05)'},
-        width: 'calc(100% * 7 / 8)'
-      }}
-    >
+    <Paper elevation={10} sx={cardStyle}>
       <a href={url} rel="noopener noreferrer">
         <Grid container spacing={2}>
           <Grid item xs={3}>
@@ -36,15 +36,11 @@ export default function ProjectInfoCard({url, title, desc, img, technologies_use
           <Grid item xs={9}>
             <Typography component="h6" variant='h5' sx={{fontWeight: 'bold'}}>{title}</Typography>            
             <Grid container spacing={1}>
-              {
-                technologies_used.map((tech) => (
-                  <Grid item>
-                    <Button sx={{border:"thin dashed", color: 'black', my: 1, '&:hover': {backgroundColor: '#dedede'}}}>
-                      {tech}
-                    </Button>
-                  </Grid>
-                ))
-              }
+              {technologies_used.map((tech) => (
+                <Grid item>
+                  <Button sx={techNameButtonStyle}>{tech}</Button>
+                </Grid>
+              ))}
             </Grid>
             <Typography component="p">{desc}</Typography>
           </Grid>

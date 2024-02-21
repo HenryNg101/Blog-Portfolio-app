@@ -2,7 +2,6 @@ import React from 'react';
 import ProjectInfoCard from '../components/project_info_card';
 import projectsData from '../data/projects_data.json';
 import { useSearchParams } from 'react-router-dom';
-import browserHistory from 'react-router';
 
 /*
 Metadata of a project's info (projects_data.json):

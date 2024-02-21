@@ -11,7 +11,6 @@ import {
 import ErrorPage from './pages/error';
 import About from './pages/about';
 import Projects from './pages/projects';
-import Home from './pages/home';
 
 const rootElement = document.getElementById('root');
 

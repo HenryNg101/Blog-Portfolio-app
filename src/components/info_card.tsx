@@ -17,20 +17,8 @@ const accounts = [
 ]
 
 export default function MediaCard() {
-  //let [isHovering, setButtonHoveringStatus] = React.useState(false);
-
   return (
-    <Card 
-      sx={{ 
-        width: 300,
-        my: 2,
-        mx: 'auto',
-        p: 2,
-        textAlign: 'center', 
-        borderRadius: '20px',
-        position: {md: 'fixed'},
-      }}
-    >
+    <Card sx={{ width: 300, my: 2, mx: 'auto', p: 2, textAlign: 'center', borderRadius: '20px', position: {md: 'fixed'}}}>
       <CardMedia
         sx={{width: 100, height: 100, borderRadius: '50%', marginLeft: "auto", marginRight: "auto"}}
         image="/assets/image/avatar.jpg"
@@ -38,26 +26,16 @@ export default function MediaCard() {
       />
             
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Henry Nguyen
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          A guy who wants to explore this world of technologies
-        </Typography>
+        <Typography gutterBottom variant="h5" component="div"> Henry Nguyen </Typography>
+        <Typography variant="body2" color="text.secondary"> A guy who wants to explore this world of technologies </Typography>
       </CardContent>
-      <Typography variant="body2" color="text.secondary">
-        My contacts:
-      </Typography>
+      <Typography variant="body2" color="text.secondary"> My contacts: </Typography>
 
       <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
         {
           accounts.map((account) => (
             <a href={account.url} key={account.type + account.url}>
-              <FontAwesomeIcon 
-                icon={account.icon}
-                size='2x'
-                color='gray'
-                title={account.type}
+              <FontAwesomeIcon icon={account.icon} size='2x' color='gray' title={account.type}
                 onMouseEnter={(e) => {e.currentTarget.style.color = 'black'}} 
                 onMouseLeave={(e) => {e.currentTarget.style.color = 'gray'}}
               />
