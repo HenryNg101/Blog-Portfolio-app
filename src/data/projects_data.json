@@ -2,7 +2,7 @@
   {
     "url": "https://github.com/bifrostlab/llm-assistant",
     "img": {
-      "loc":"/assets/image/VAITLogo.jpg",
+      "loc":"/assets/image/VAITLogo.png",
       "alt":"VAIT icon"
     },
     "title": "VAIT LLM Discord Bot",
