@@ -18,7 +18,7 @@ const accounts = [
 
 export default function MediaCard() {
   return (
-    <Card sx={{ width: 300, my: 2, mx: 'auto', p: 2, textAlign: 'center', borderRadius: '20px', position: {md: 'fixed'}}}>
+    <Card sx={{ width: 300, my: 2, p: 2, textAlign: 'center', borderRadius: '20px', position: {md: 'fixed'}}}>
       <CardMedia
         sx={{width: 100, height: 100, borderRadius: '50%', marginLeft: "auto", marginRight: "auto"}}
         image="/assets/image/avatar.jpg"

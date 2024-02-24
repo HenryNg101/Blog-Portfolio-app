@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectInfoCard from '../components/project_info_card';
 import projectsData from '../data/projects_data.json';
 import { useSearchParams } from 'react-router-dom';
+import FadeIn from 'react-fade-in';
 
 /*
 Metadata of a project's info (projects_data.json):
@@ -27,7 +28,7 @@ function Projects() {
   }
 
   return (
-    <>
+    <FadeIn delay={100}>
       {
         projectsData.map((data: any) => (
           <ProjectInfoCard
@@ -38,7 +39,7 @@ function Projects() {
             technologies_used={data.technologies_used}/>
         ))
       }
-    </>
+    </FadeIn>
   );
 }
 
