@@ -40,16 +40,6 @@
     "technologies_used": ["Kotlin", "Gradle", "API", "XML", "Google Map API", "Design Patterns"]
   },
   {
-    "url": "https://github.com/HenryNg101/Nand2Tetris-solution",
-    "img": {
-      "loc":"/assets/image/nand2tetris.png",
-      "alt":"Nand2Tetris project"
-    },
-    "title": "Nand2Tetris computer system",
-    "desc": "A simple computer system with necessary hardware (developed in HDL) and software (developed in Python), built during the Nand2Tetris course",
-    "technologies_used": ["Python", "HDL", "Assembly"]
-  },
-  {
     "url": "https://devpost.com/software/medbuddy-emcsux",
     "img": {
       "loc":"/assets/image/medbuddy.png",
@@ -58,5 +48,15 @@
     "title": "Medbuddy mobile app",
     "desc": "A software solution that was built during UniHack 2022 hackathon, as a companion to solve medical-related problems. There was a web and mobile version of the solution, and I was responsible for the Android app",
     "technologies_used": ["Flutter", "Dart"]
+  },
+  {
+    "url": "https://github.com/HenryNg101/Nand2Tetris-solution",
+    "img": {
+      "loc":"/assets/image/nand2tetris.png",
+      "alt":"Nand2Tetris project"
+    },
+    "title": "Nand2Tetris computer system",
+    "desc": "A simple computer system with necessary hardware (developed in HDL) and software (developed in Python), built during the Nand2Tetris course",
+    "technologies_used": ["Python", "HDL", "Assembly"]
   }
 ]
