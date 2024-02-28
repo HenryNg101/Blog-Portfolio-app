@@ -1,29 +1,20 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
+import {
+  AppBar, Box, Toolbar, IconButton,
+  Menu, Container, Button, MenuItem
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 
 //Some shared styles
 const menuTextStyle = { color: 'black', '&:hover': { backgroundColor: 'black', color: 'white' }};
-const homeButtonStyle = {
-  ...menuTextStyle,
-  fontFamily: 'Courier New, monospace', 
-  fontWeight: 'bold', 
-  fontSize: 20
-};
+const homeButtonStyle = { ...menuTextStyle, fontFamily: 'Courier New, monospace', fontWeight: 'bold', fontSize: 20};
 const LgDisplayStyle = {display: { xs: 'none', md: 'flex'}};
 const SmDisplayStyle = {display: { xs: 'flex', md: 'none'}, flexGrow: 1};
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const pages = ['About', 'Projects'];  //TODO: Add the home page later
+  const pages = ['Projects'];  //TODO: Add the blog page later, when we done the blog backend api
 
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
@@ -45,7 +36,7 @@ function NavBar() {
 
           <Box sx={LgDisplayStyle}>
             {pages.map((page) => (
-              <Button key={page} sx={{...menuTextStyle, mx: 0.5, fontFamily: 'monospace'}}>
+              <Button key={page} sx={{...menuTextStyle, mx: 0.5}}>
                 <Link to={`/${page.toLowerCase()}`}>{page}</Link>
               </Button>
             ))}
@@ -75,6 +66,7 @@ function NavBar() {
           <Button sx={{...homeButtonStyle, ...SmDisplayStyle}}>
             <Link to={`/`}>Henry Nguyen</Link>
           </Button>
+          
           <div style={{flexGrow: 1}}></div>
         </Toolbar>
       </Container>

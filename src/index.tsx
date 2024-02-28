@@ -11,6 +11,7 @@ import {
 import ErrorPage from './pages/error';
 import About from './pages/about';
 import Projects from './pages/projects';
+import Blog from './pages/blog';
 
 const rootElement = document.getElementById('root');
 
@@ -23,19 +24,23 @@ const routerConfig = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <Navigate to="/about" replace={true} />,
+        element: <About/>,
       },
       {
         path: 'about',
-        element: <About/>
+        element: <Navigate to="/" replace={true} />
       },
       {
         path: 'home',
-        element: <Navigate to="/about" replace={true} />,
+        element: <Navigate to="/" replace={true} />,
       },
       {
         path: 'projects',
         element: <Projects/>
+      },
+      {
+        path: 'blog',
+        element: <Blog/>
       }
     ]
   },

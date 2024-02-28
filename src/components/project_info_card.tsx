@@ -29,11 +29,11 @@ export default function ProjectInfoCard({url, title, desc, img, technologies_use
     <Paper elevation={10} sx={cardStyle}>
       <a href={url} rel="noopener noreferrer">
         <Grid container spacing={2}>
-          <Grid item xs={3}>
+          <Grid item xs={2}>
             <img src={img.loc} alt={img.alt} width={150}/>
           </Grid>
 
-          <Grid item xs={9}>
+          <Grid item xs={10}>
             <Typography component="h6" variant='h5' sx={{fontWeight: 'bold'}}>{title}</Typography>            
             <Grid container spacing={1}>
               {technologies_used.map((tech) => (
