@@ -7,8 +7,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 
 //Some shared styles
-const menuTextStyle = { color: 'black', '&:hover': { backgroundColor: 'black', color: 'white' }};
-const homeButtonStyle = { ...menuTextStyle, fontFamily: 'Courier New, monospace', fontWeight: 'bold', fontSize: 20};
+const menuTextStyle = { color: 'white', '&:hover': { backgroundColor: 'black', color: 'white' }};
+const homeButtonStyle = { ...menuTextStyle, fontWeight: 'bold', fontSize: 18};
 const LgDisplayStyle = {display: { xs: 'none', md: 'flex'}};
 const SmDisplayStyle = {display: { xs: 'flex', md: 'none'}, flexGrow: 1};
 
@@ -26,7 +26,7 @@ function NavBar() {
 
   //Render differently when screen size is large or small.
   return (
-    <AppBar position="static" sx={{backgroundColor: 'gray', mb: 2}}>
+    <AppBar position="static" sx={{backgroundColor: 'rgb(9,54,0)', mb: 2}}>
       <Container maxWidth={false}>
         <Toolbar disableGutters>
           {/* This is the elements design for navigation menu for normal screen size */}
