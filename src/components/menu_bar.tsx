@@ -7,10 +7,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 
 //Some shared styles
-const menuTextStyle = { color: 'white', '&:hover': { backgroundColor: 'black', color: 'white' }};
+const lightToDark = {backgroundColor: 'white', color: 'black'};
+
+const menuTextStyle = { color: 'white', '&:hover': lightToDark};
 const homeButtonStyle = { ...menuTextStyle, fontWeight: 'bold', fontSize: 18};
 const LgDisplayStyle = {display: { xs: 'none', md: 'flex'}};
 const SmDisplayStyle = {display: { xs: 'flex', md: 'none'}, flexGrow: 1};
+const menuButtonStyle = {border: 'solid thin white', borderRadius: 1, '&:hover': { ...lightToDark, '& .MuiSvgIcon-root': lightToDark}};
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -45,8 +48,8 @@ function NavBar() {
 
           {/* This is the elements design for navigation menu for small screen size, esp on mobile */}
           <Box sx={SmDisplayStyle}>
-            <IconButton size="large" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu}>
-              <MenuIcon />
+            <IconButton size="large" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} sx={menuButtonStyle}>
+              <MenuIcon sx={{color: 'white'}}/>
             </IconButton>
             <Menu
               id="menu-appbar" keepMounted anchorEl={anchorElNav}
