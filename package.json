@@ -29,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-server": "ts-node server.ts",
+    "start-server": "nodemon server.ts",
     "serve": "npm run build && npm run start-server"
   },
   "browserslist": {
