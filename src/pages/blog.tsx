@@ -20,6 +20,10 @@ function Blog(){
 		queryFn: () => axios.get(`${API_BASE_URL}/api/posts`).then(res => res.data)
 	});
 
+	if(posts && posts.length > 0){
+	    console.log(posts)
+	}
+
 	let blog_tags = Array(5).fill(
 		<Grid item>
 			<Skeleton sx={{my: 1}}>
@@ -43,24 +47,7 @@ function Blog(){
 			</Grid>
 		</Paper>
 	);
-
 	return <>{skeleton_blogs}</>;
-
-	// if(isLoading) {
-	// return <Skeleton variant="rectangular" width={210} height={118} />
-	// }
-
-	// if(isError){
-	//     return <div>Error</div>;
-	// }
-
-	// if(posts && posts.length > 0){
-	//     console.log(posts)
-	// }
-
-	// return (
-	//     <div></div>
-	// );
 }
 
 export default ReactQueryClient;

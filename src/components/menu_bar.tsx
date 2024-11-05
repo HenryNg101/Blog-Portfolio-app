@@ -17,7 +17,7 @@ const menuButtonStyle = {border: 'solid thin white', borderRadius: 1, '&:hover':
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const pages = ['Projects'];  //TODO: Add the blog page later, when we done the blog backend api
+  const pages = ['Projects', 'Resume'];  //TODO: Add the blog page later, when we done the blog backend api
 
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);

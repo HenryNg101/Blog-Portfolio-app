@@ -1,3 +1,3 @@
-const API_BASE_URL = 'https://personal-blog-backend-spring-app.onrender.com';
+const API_BASE_URL = 'https://restapiserver--ghz2vim.happyplant-e2e9287f.australiaeast.azurecontainerapps.io';
 
 export default API_BASE_URL;

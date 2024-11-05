@@ -12,6 +12,7 @@ import ErrorPage from './pages/error';
 import About from './pages/about';
 import Projects from './pages/projects';
 import Blog from './pages/blog';
+import Resume from './pages/resume';
 
 const rootElement = document.getElementById('root');
 
@@ -41,6 +42,10 @@ const routerConfig = createBrowserRouter([
       {
         path: 'blog',
         element: <Blog/>
+      },
+      {
+        path: 'resume',
+        element: <Resume/>
       }
     ]
   },
