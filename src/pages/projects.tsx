@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProjectInfoCard from '../components/project_info_card';
 import projectsData from '../data/projects_data.json';
 import { useSearchParams } from 'react-router-dom';
@@ -18,15 +18,6 @@ Metadata of a project's info (projects_data.json):
 */
 
 function Projects() {
-  const [searchParam] = useSearchParams();
-  const url_mapping = new Map(projectsData.map((data: any, id: number) => [id, data.url]));
-  var projectId = searchParam.get("id");
-
-  if(projectId != null && url_mapping.has(parseInt(projectId))){
-    window.location.replace(url_mapping.get(parseInt(projectId)));
-    return null;
-  }
-
   return (
     <FadeIn delay={100}>
       {

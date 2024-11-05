@@ -28,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-server": "ts-node server.ts",
+    "serve": "npm run build && npm run start-server"
   },
   "browserslist": {
     "production": [
@@ -52,6 +54,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "react-scripts": "^5.0.1",
+    "ts-node": "^10.9.2",
     "typescript": "^4.9.5"
   }
 }
