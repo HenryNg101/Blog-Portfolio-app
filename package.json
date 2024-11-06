@@ -25,12 +25,11 @@
     "web-vitals": "^3.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run build && npm run start-server",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-server": "nodemon server.ts",
-    "serve": "npm run build && npm run start-server"
+    "start-server": "nodemon server.ts"
   },
   "browserslist": {
     "production": [
