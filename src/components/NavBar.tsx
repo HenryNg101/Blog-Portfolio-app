@@ -4,7 +4,7 @@ import {
   Menu, Container, Button, MenuItem
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 //Some shared styles
 const lightToDark = {backgroundColor: 'white', color: 'black'};
@@ -19,6 +19,8 @@ function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const pages = ['Projects', 'Resume'];  //TODO: Add the blog page later, when we done the blog backend api
 
+  // TODO: Define the type for this one later
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -34,13 +36,13 @@ function NavBar() {
         <Toolbar disableGutters>
           {/* This is the elements design for navigation menu for normal screen size */}
           <Button sx={{...homeButtonStyle, ...LgDisplayStyle}}>
-            <Link to={`/`}>Henry Nguyen</Link>
+            <Link href={`/`}>Henry Nguyen</Link>
           </Button>
 
           <Box sx={LgDisplayStyle}>
             {pages.map((page) => (
               <Button key={page} sx={{...menuTextStyle, mx: 0.5}}>
-                <Link to={`/${page.toLowerCase()}`}>{page}</Link>
+                <Link href={`/${page.toLowerCase()}`}>{page}</Link>
               </Button>
             ))}
           </Box>
@@ -60,14 +62,14 @@ function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link to={`/${page.toLowerCase()}`}>{page}</Link>
+                  <Link href={`/${page.toLowerCase()}`}>{page}</Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
           <Button sx={{...homeButtonStyle, ...SmDisplayStyle}}>
-            <Link to={`/`}>Henry Nguyen</Link>
+            <Link href={`/`}>Henry Nguyen</Link>
           </Button>
           
           <div style={{flexGrow: 1}}></div>

@@ -1,10 +1,11 @@
 // /pages/api/projects/[id].ts
 import { NextApiRequest, NextApiResponse } from 'next';
-import projectsData from '../../../../data/projects_data.json';
+import projectsData from '@/data/projects_data.json';
+import { ProjectDetails } from '@/types/project_details';
 
 // Create a URL mapping similar to your Express app
 const urlMapping = new Map(
-  projectsData.map((data: any, id: number) => [id, data.url])
+  projectsData.map((data: ProjectDetails, id: number) => [id, data.url])
 );
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

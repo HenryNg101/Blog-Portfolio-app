@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         source: '/projects/:id', // user-facing URL
         destination: '/api/projects/:id', // API route for redirect logic
       },
+      {
+        source: '/resume',
+        destination: '/api/resume'
+      }
     ];
   },
 };

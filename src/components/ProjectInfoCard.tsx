@@ -1,18 +1,7 @@
 import { Paper, Grid, Typography, Button } from '@mui/material';
 import React from 'react';
-
-interface ImageInfo {
-  loc: string;
-  alt: string;  //Alternative title when image is not available
-}
-
-interface ProjectDetails {
-  url: string;
-  title: string;
-  desc: string;
-  img: ImageInfo;
-  technologies_used: Array<string>;
-}
+// import Image from 'next/image';
+import { ProjectDetails } from '@/types/project_details';
 
 //Some styling for components (sx prop)
 const cardStyle = { 
@@ -37,7 +26,7 @@ export default function ProjectInfoCard({url, title, desc, img, technologies_use
             <Typography component="h6" variant='h5' sx={{fontWeight: 'bold'}}>{title}</Typography>            
             <Grid container spacing={1}>
               {technologies_used.map((tech) => (
-                <Grid item>
+                <Grid item key={tech}>
                   <Button sx={techNameButtonStyle}>{tech}</Button>
                 </Grid>
               ))}

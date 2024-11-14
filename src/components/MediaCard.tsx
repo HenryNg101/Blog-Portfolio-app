@@ -12,7 +12,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const accounts = [
   {"type": "Github", "url": "https://github.com/HenryNg101", "icon": faSquareGithub},
-  {"type": "Gmail", "url":"mailto:hungnguyenquoc8a2@gmail.com", "icon": faEnvelope},
+  {"type": "Gmail", "url":"mailto:henryng.tech.dev@gmail.com", "icon": faEnvelope},
   {"type": "LinkedIn", "url":"https://www.linkedin.com/in/henry-nguyen0/", "icon": faLinkedin}
 ]
 
@@ -21,7 +21,7 @@ export default function MediaCard() {
     <Card sx={{ width: 300, my: 2, mx: 'auto', p: 2, textAlign: 'center', borderRadius: '20px', position: {md: 'fixed'}}}>
       <CardMedia
         sx={{width: 100, height: 100, borderRadius: '50%', marginLeft: "auto", marginRight: "auto"}}
-        image="/assets/image/avatar.jpg"
+        image="/assets/images/avatar.jpg"
         title="Avatar"
       />
             
