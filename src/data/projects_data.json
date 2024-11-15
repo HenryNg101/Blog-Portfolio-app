@@ -1,15 +1,5 @@
 [
     {
-      "url": "https://github.com/bifrostlab/llm-assistant",
-      "img": {
-        "loc":"/assets/images/VAITLogo.png",
-        "alt":"VAIT icon"
-      },
-      "title": "VAIT LLM Discord Bot",
-      "desc": "An open source project to create and develop a Discord bot for VAIT server that can utilise LLM to help members of the server to query on the bot, and even asking for CV review (Got asked a lot on this server)",
-      "technologies_used": ["Typescript", "React", "Spring Java", "Docker", "MongoDB Atlas", "REST API"]
-    },
-    {
       "url": "https://github.com/HenryNg101/Blog-Portfolio-app",
       "img": {
         "loc":"/assets/images/white_h_letter.png",

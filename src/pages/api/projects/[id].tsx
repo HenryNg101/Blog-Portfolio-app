@@ -5,7 +5,7 @@ import { ProjectDetails } from '@/types/project_details';
 
 // Create a URL mapping similar to your Express app
 const urlMapping = new Map(
-  projectsData.map((data: ProjectDetails, id: number) => [id, data.url])
+  projectsData.map((data: ProjectDetails, id: number) => [id+1, data.url])
 );
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
