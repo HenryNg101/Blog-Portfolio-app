@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       {
         source: '/resume',
         destination: '/api/resume'
+      },
+      {
+        source: '/about',
+        destination: '/'
       }
     ];
   },
